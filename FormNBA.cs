@@ -43,9 +43,10 @@ namespace NBA_LP_Projekt
                     btnDodajIgraca.Visible = true;
                     lblPomoc.Text = "Klub za koji igra igrač " + txtIgrac.Text + " je";
                     txtKlub.Focus();
+                    //MessageBox.Show("Igrač uspješno dodan!");
                 }
                 else
-                    MessageBox.Show("Igrač dodan!");
+                    MessageBox.Show("U redu.");
             }
         }
 
@@ -65,8 +66,9 @@ namespace NBA_LP_Projekt
             txtKlub.Visible = false;
             btnDodajIgraca.Visible = false;
             lblKlub.Visible = false;
+            lblPomoc.Text = "";
             MessageBox.Show("Igrač uspješno dodan");
-        }
+            }
     }
     }
 
