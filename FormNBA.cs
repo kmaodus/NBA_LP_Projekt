@@ -9,6 +9,10 @@ namespace NBA_LP_Projekt
         public FormNBA()
         {
             InitializeComponent();
+            lblKlub.Hide();
+            txtKlub.Hide();
+            lblPomoc.Hide();
+            btnDodajIgraca.Hide();
         }
 
         private void FormNBA_Load(object sender, EventArgs e)
@@ -16,19 +20,19 @@ namespace NBA_LP_Projekt
             Environment.SetEnvironmentVariable("SWI_HOME_DIR", @"prolog");
             Environment.SetEnvironmentVariable("Path", @"prolog");
             Environment.SetEnvironmentVariable("Path", @"prolog\bin");
-            string[] p = { "-q", "-f", @"nba.pl" };
-            PlEngine.Initialize(p);
+            string[] parametri = { "-q", "-f", @"nba.pl" };
+            PlEngine.Initialize(parametri);
             PlQuery postojiDatoteka = new PlQuery("postojiDatoteka");
             postojiDatoteka.NextSolution();
         }
 
         private void btnProvjeri_Click(object sender, EventArgs e)
         {
-            PlQuery nba = new PlQuery("igrac(E,C)");
-            nba.Variables["E"].Unify(txtIgrac.Text.ToLower());
+            PlQuery nba = new PlQuery("igrac(I,K)");
+            nba.Variables["I"].Unify(txtIgrac.Text.ToLower());
             if (nba.NextSolution() == true)
             {
-                MessageBox.Show("Igrač " + txtIgrac.Text + " igra za klub " + nba.Variables["C"].ToString().ToUpper());
+                MessageBox.Show("Igrač " + txtIgrac.Text + " igra za klub " + nba.Variables["K"].ToString().ToUpper());
                 txtIgrac.Text = "";
                 txtIgrac.Focus();
             }
@@ -39,11 +43,11 @@ namespace NBA_LP_Projekt
                 if (r == DialogResult.Yes)
                 {
                     lblPomoc.Visible = true;
+                    lblKlub.Visible = true;
                     txtKlub.Visible = true;
                     btnDodajIgraca.Visible = true;
                     lblPomoc.Text = "Klub za koji igra igrač " + txtIgrac.Text + " je";
                     txtKlub.Focus();
-                    //MessageBox.Show("Igrač uspješno dodan!");
                 }
                 else
                     MessageBox.Show("U redu.");
@@ -52,23 +56,31 @@ namespace NBA_LP_Projekt
 
         private void FormNBA_FormClosing(object sender, FormClosingEventArgs e)
         {
-            PlQuery q = new PlQuery("zatvoriDatoteku");
-            q.NextSolution();
+            PlQuery zatvoriDatoteku = new PlQuery("zatvoriDatoteku");
+            zatvoriDatoteku.NextSolution();
             PlEngine.PlCleanup();
         }
 
         private void btnDodajIgraca_Click(object sender, EventArgs e)
         {
-            PlQuery add = new PlQuery("dodajIgraca(E, C)");
-            add.Variables["E"].Unify(txtIgrac.Text.ToLower());
-            add.Variables["C"].Unify(txtKlub.Text.ToLower());
-            add.NextSolution();
+            PlQuery dodajIgraca = new PlQuery("dodajIgraca(I, K)");
+            dodajIgraca.Variables["I"].Unify(txtIgrac.Text.ToLower());
+            dodajIgraca.Variables["K"].Unify(txtKlub.Text.ToLower());
+            dodajIgraca.NextSolution();
             txtKlub.Visible = false;
             btnDodajIgraca.Visible = false;
             lblKlub.Visible = false;
             lblPomoc.Text = "";
             MessageBox.Show("Igrač uspješno dodan");
             }
+
+        private void btnObrisi_Click(object sender, EventArgs e)
+        {
+            PlQuery obrisiIgraca = new PlQuery("obrisiIgraca(I)");
+            obrisiIgraca.Variables["I"].Unify(txtObrisiIgraca.Text.ToLower());
+            obrisiIgraca.NextSolution();
+            MessageBox.Show("Igrač uspješno obrisan");
+        }
     }
     }
 

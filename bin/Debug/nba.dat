@@ -36,6 +36,12 @@ klub('washington wizards').
 
 :- dynamic igrac/2.
 
+igrac('tacko fall', 'boston celtics').
+igrac('daniel theis', 'boston celtics').
+igrac('grant williams', 'boston celtics').
+igrac('jayson tatum', 'boston celtics').
+igrac('gordon hayward', 'boston celtics').
+igrac('jaylen brown', 'boston celtics').
 igrac('alex len', 'atlanta hawks').
 igrac('evan turner', 'atlanta hawks').
 igrac('brandon goodwin', 'atlanta hawks').
@@ -47,7 +53,6 @@ igrac('cam reddish', 'atlanta hawks').
 igrac('john collins', 'atlanta hawks').
 igrac('vince carter', 'atlanta hawks').
 igrac('allen crabbe', 'atlanta hawks').
-
 igrac('kemba walker', 'boston celtics').
 igrac('zach lavine', 'chicago bulls').
 igrac('mario hezonja', 'new york knicks').
@@ -55,5 +60,4 @@ igrac('Lebron James', 'Los Angeles Lakers').
 igrac('Zach Lavine', 'Chicago Bulls').
 igrac('kobe bryant', 'los angeles lakers').
 igrac('dario saric', 'phoenix suns').
-
 
