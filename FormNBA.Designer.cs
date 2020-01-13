@@ -38,23 +38,29 @@
             this.lblKlub = new System.Windows.Forms.Label();
             this.lblPomoc = new System.Windows.Forms.Label();
             this.txtObrisiIgraca = new System.Windows.Forms.TextBox();
-            this.btnObrisi = new System.Windows.Forms.Button();
+            this.btnObrisiIgraca = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabDodavanje = new System.Windows.Forms.TabPage();
             this.tabBrisanje = new System.Windows.Forms.TabPage();
+            this.lblObrisiKlub = new System.Windows.Forms.Label();
+            this.txtObrisiKlub = new System.Windows.Forms.TextBox();
+            this.btnObrisiKlub = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelPozadina = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabDodavanje.SuspendLayout();
             this.tabBrisanje.SuspendLayout();
+            this.panelPozadina.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(355, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(716, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(295, 258);
+            this.pictureBox1.Size = new System.Drawing.Size(295, 276);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -90,7 +96,7 @@
             // btnDodajIgraca
             // 
             this.btnDodajIgraca.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDodajIgraca.Location = new System.Drawing.Point(45, 435);
+            this.btnDodajIgraca.Location = new System.Drawing.Point(40, 422);
             this.btnDodajIgraca.Name = "btnDodajIgraca";
             this.btnDodajIgraca.Size = new System.Drawing.Size(179, 51);
             this.btnDodajIgraca.TabIndex = 4;
@@ -100,7 +106,7 @@
             // 
             // txtKlub
             // 
-            this.txtKlub.Location = new System.Drawing.Point(45, 376);
+            this.txtKlub.Location = new System.Drawing.Point(40, 368);
             this.txtKlub.Name = "txtKlub";
             this.txtKlub.Size = new System.Drawing.Size(351, 27);
             this.txtKlub.TabIndex = 2;
@@ -109,7 +115,7 @@
             // 
             this.lblKlub.AutoSize = true;
             this.lblKlub.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKlub.Location = new System.Drawing.Point(40, 336);
+            this.lblKlub.Location = new System.Drawing.Point(40, 320);
             this.lblKlub.Name = "lblKlub";
             this.lblKlub.Size = new System.Drawing.Size(71, 29);
             this.lblKlub.TabIndex = 3;
@@ -118,43 +124,45 @@
             // lblPomoc
             // 
             this.lblPomoc.AutoSize = true;
-            this.lblPomoc.Location = new System.Drawing.Point(171, 344);
+            this.lblPomoc.Location = new System.Drawing.Point(171, 331);
             this.lblPomoc.Name = "lblPomoc";
-            this.lblPomoc.Size = new System.Drawing.Size(53, 20);
+            this.lblPomoc.Size = new System.Drawing.Size(98, 25);
             this.lblPomoc.TabIndex = 5;
-            this.lblPomoc.Text = "label1";
+            this.lblPomoc.Text = "lblPomoc";
             // 
             // txtObrisiIgraca
             // 
+            this.txtObrisiIgraca.BackColor = System.Drawing.SystemColors.Window;
             this.txtObrisiIgraca.Location = new System.Drawing.Point(40, 90);
             this.txtObrisiIgraca.Name = "txtObrisiIgraca";
             this.txtObrisiIgraca.Size = new System.Drawing.Size(351, 27);
             this.txtObrisiIgraca.TabIndex = 7;
             // 
-            // btnObrisi
+            // btnObrisiIgraca
             // 
-            this.btnObrisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnObrisi.Location = new System.Drawing.Point(40, 150);
-            this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(133, 51);
-            this.btnObrisi.TabIndex = 6;
-            this.btnObrisi.Text = "Obriši";
-            this.btnObrisi.UseVisualStyleBackColor = true;
-            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
+            this.btnObrisiIgraca.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnObrisiIgraca.Location = new System.Drawing.Point(40, 150);
+            this.btnObrisiIgraca.Name = "btnObrisiIgraca";
+            this.btnObrisiIgraca.Size = new System.Drawing.Size(133, 51);
+            this.btnObrisiIgraca.TabIndex = 6;
+            this.btnObrisiIgraca.Text = "Obriši";
+            this.btnObrisiIgraca.UseVisualStyleBackColor = true;
+            this.btnObrisiIgraca.Click += new System.EventHandler(this.btnObrisiIgraca_Click);
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabDodavanje);
             this.tabControl1.Controls.Add(this.tabBrisanje);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(49, 251);
+            this.tabControl1.Location = new System.Drawing.Point(729, 277);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(840, 555);
+            this.tabControl1.Size = new System.Drawing.Size(642, 555);
             this.tabControl1.TabIndex = 10;
             // 
             // tabDodavanje
             // 
+            this.tabDodavanje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(183)))));
             this.tabDodavanje.Controls.Add(this.lblIgrac);
             this.tabDodavanje.Controls.Add(this.btnProvjeri);
             this.tabDodavanje.Controls.Add(this.txtIgrac);
@@ -166,24 +174,54 @@
             this.tabDodavanje.Location = new System.Drawing.Point(4, 29);
             this.tabDodavanje.Name = "tabDodavanje";
             this.tabDodavanje.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDodavanje.Size = new System.Drawing.Size(832, 522);
+            this.tabDodavanje.Size = new System.Drawing.Size(634, 522);
             this.tabDodavanje.TabIndex = 0;
             this.tabDodavanje.Text = "Dodavanje";
-            this.tabDodavanje.UseVisualStyleBackColor = true;
             // 
             // tabBrisanje
             // 
+            this.tabBrisanje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(23)))), ((int)(((byte)(75)))));
+            this.tabBrisanje.Controls.Add(this.lblObrisiKlub);
+            this.tabBrisanje.Controls.Add(this.txtObrisiKlub);
+            this.tabBrisanje.Controls.Add(this.btnObrisiKlub);
             this.tabBrisanje.Controls.Add(this.label1);
             this.tabBrisanje.Controls.Add(this.txtObrisiIgraca);
-            this.tabBrisanje.Controls.Add(this.btnObrisi);
+            this.tabBrisanje.Controls.Add(this.btnObrisiIgraca);
             this.tabBrisanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabBrisanje.Location = new System.Drawing.Point(4, 25);
+            this.tabBrisanje.Location = new System.Drawing.Point(4, 29);
             this.tabBrisanje.Name = "tabBrisanje";
             this.tabBrisanje.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBrisanje.Size = new System.Drawing.Size(664, 559);
+            this.tabBrisanje.Size = new System.Drawing.Size(634, 522);
             this.tabBrisanje.TabIndex = 1;
             this.tabBrisanje.Text = "Brisanje";
-            this.tabBrisanje.UseVisualStyleBackColor = true;
+            // 
+            // lblObrisiKlub
+            // 
+            this.lblObrisiKlub.AutoSize = true;
+            this.lblObrisiKlub.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObrisiKlub.Location = new System.Drawing.Point(40, 320);
+            this.lblObrisiKlub.Name = "lblObrisiKlub";
+            this.lblObrisiKlub.Size = new System.Drawing.Size(273, 29);
+            this.lblObrisiKlub.TabIndex = 11;
+            this.lblObrisiKlub.Text = "Klub koji želite obrisati:";
+            // 
+            // txtObrisiKlub
+            // 
+            this.txtObrisiKlub.Location = new System.Drawing.Point(40, 367);
+            this.txtObrisiKlub.Name = "txtObrisiKlub";
+            this.txtObrisiKlub.Size = new System.Drawing.Size(351, 27);
+            this.txtObrisiKlub.TabIndex = 10;
+            // 
+            // btnObrisiKlub
+            // 
+            this.btnObrisiKlub.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnObrisiKlub.Location = new System.Drawing.Point(40, 419);
+            this.btnObrisiKlub.Name = "btnObrisiKlub";
+            this.btnObrisiKlub.Size = new System.Drawing.Size(133, 51);
+            this.btnObrisiKlub.TabIndex = 9;
+            this.btnObrisiKlub.Text = "Obriši";
+            this.btnObrisiKlub.UseVisualStyleBackColor = true;
+            this.btnObrisiKlub.Click += new System.EventHandler(this.btnObrisiKlub_Click);
             // 
             // label1
             // 
@@ -195,15 +233,29 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Ime i prezime igrača:";
             // 
+            // panelPozadina
+            // 
+            this.panelPozadina.AutoSize = true;
+            this.panelPozadina.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelPozadina.BackgroundImage")));
+            this.panelPozadina.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelPozadina.Controls.Add(this.tabControl1);
+            this.panelPozadina.Controls.Add(this.pictureBox1);
+            this.panelPozadina.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPozadina.Location = new System.Drawing.Point(0, 0);
+            this.panelPozadina.Name = "panelPozadina";
+            this.panelPozadina.Size = new System.Drawing.Size(1421, 845);
+            this.panelPozadina.TabIndex = 11;
+            // 
             // FormNBA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 845);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.pictureBox1);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1421, 845);
+            this.Controls.Add(this.panelPozadina);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNBA";
-            this.Text = "NBA";
+            this.Text = "Logičko programiranje - NBA";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormNBA_FormClosing);
             this.Load += new System.EventHandler(this.FormNBA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -212,7 +264,9 @@
             this.tabDodavanje.PerformLayout();
             this.tabBrisanje.ResumeLayout(false);
             this.tabBrisanje.PerformLayout();
+            this.panelPozadina.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -227,11 +281,15 @@
         private System.Windows.Forms.Label lblKlub;
         private System.Windows.Forms.Label lblPomoc;
         private System.Windows.Forms.TextBox txtObrisiIgraca;
-        private System.Windows.Forms.Button btnObrisi;
+        private System.Windows.Forms.Button btnObrisiIgraca;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabDodavanje;
         private System.Windows.Forms.TabPage tabBrisanje;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblObrisiKlub;
+        private System.Windows.Forms.TextBox txtObrisiKlub;
+        private System.Windows.Forms.Button btnObrisiKlub;
+        private System.Windows.Forms.Panel panelPozadina;
     }
 }
 

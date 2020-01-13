@@ -64,6 +64,9 @@ namespace NBA_LP_Projekt
         private void btnDodajIgraca_Click(object sender, EventArgs e)
         {
             PlQuery dodajIgraca = new PlQuery("dodajIgraca(I, K)");
+            PlQuery dodajKlub = new PlQuery("dodajKlub(K)");
+            dodajKlub.Variables["K"].Unify(txtKlub.Text.ToLower());
+            dodajKlub.NextSolution();
             dodajIgraca.Variables["I"].Unify(txtIgrac.Text.ToLower());
             dodajIgraca.Variables["K"].Unify(txtKlub.Text.ToLower());
             dodajIgraca.NextSolution();
@@ -74,12 +77,27 @@ namespace NBA_LP_Projekt
             MessageBox.Show("Igrač uspješno dodan");
             }
 
-        private void btnObrisi_Click(object sender, EventArgs e)
+        private void btnObrisiIgraca_Click(object sender, EventArgs e)
         {
             PlQuery obrisiIgraca = new PlQuery("obrisiIgraca(I)");
             obrisiIgraca.Variables["I"].Unify(txtObrisiIgraca.Text.ToLower());
-            obrisiIgraca.NextSolution();
-            MessageBox.Show("Igrač uspješno obrisan");
+            if (obrisiIgraca.NextSolution() == true)
+            {
+                obrisiIgraca.NextSolution();
+                MessageBox.Show("Igrač " + txtObrisiIgraca.Text + " uspješno obrisan");
+            }
+            else
+            {
+                MessageBox.Show("Igrač " + txtObrisiIgraca.Text + " nije prethodno dodan!");
+            }
+        }
+
+        private void btnObrisiKlub_Click(object sender, EventArgs e)
+        {
+            PlQuery obrisiKlub = new PlQuery("obrisiKlub(K)");
+            obrisiKlub.Variables["K"].Unify(txtObrisiKlub.Text.ToLower());
+            obrisiKlub.NextSolution();
+            MessageBox.Show("Klub " + txtObrisiKlub.Text + " uspješno obrisan");
         }
     }
     }
