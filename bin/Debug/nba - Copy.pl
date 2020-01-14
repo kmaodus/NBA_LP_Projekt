@@ -1,6 +1,5 @@
 :- dynamic klub/1.
 
-klub('varazdin kk').
 klub('atlanta hawks').
 klub('boston celtics').
 klub('brooklyn nets').
@@ -37,7 +36,6 @@ klub('washington wizards').
 
 :- dynamic igrac/2.
 
-igrac(kikica, 'varazdin kk').
 igrac('tacko fall', 'boston celtics').
 igrac('daniel theis', 'boston celtics').
 igrac('grant williams', 'boston celtics').

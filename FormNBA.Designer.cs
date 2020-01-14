@@ -47,11 +47,18 @@
             this.btnObrisiKlub = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelPozadina = new System.Windows.Forms.Panel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zatvoriAplikacijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabDodavanje.SuspendLayout();
             this.tabBrisanje.SuspendLayout();
             this.panelPozadina.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -126,7 +133,7 @@
             this.lblPomoc.AutoSize = true;
             this.lblPomoc.Location = new System.Drawing.Point(171, 331);
             this.lblPomoc.Name = "lblPomoc";
-            this.lblPomoc.Size = new System.Drawing.Size(98, 25);
+            this.lblPomoc.Size = new System.Drawing.Size(78, 20);
             this.lblPomoc.TabIndex = 5;
             this.lblPomoc.Text = "lblPomoc";
             // 
@@ -140,13 +147,14 @@
             // 
             // btnObrisiIgraca
             // 
+            this.btnObrisiIgraca.BackColor = System.Drawing.SystemColors.Control;
             this.btnObrisiIgraca.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnObrisiIgraca.Location = new System.Drawing.Point(40, 150);
             this.btnObrisiIgraca.Name = "btnObrisiIgraca";
             this.btnObrisiIgraca.Size = new System.Drawing.Size(133, 51);
             this.btnObrisiIgraca.TabIndex = 6;
             this.btnObrisiIgraca.Text = "Obriši";
-            this.btnObrisiIgraca.UseVisualStyleBackColor = true;
+            this.btnObrisiIgraca.UseVisualStyleBackColor = false;
             this.btnObrisiIgraca.Click += new System.EventHandler(this.btnObrisiIgraca_Click);
             // 
             // tabControl1
@@ -162,7 +170,7 @@
             // 
             // tabDodavanje
             // 
-            this.tabDodavanje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(107)))), ((int)(((byte)(183)))));
+            this.tabDodavanje.BackColor = System.Drawing.SystemColors.Control;
             this.tabDodavanje.Controls.Add(this.lblIgrac);
             this.tabDodavanje.Controls.Add(this.btnProvjeri);
             this.tabDodavanje.Controls.Add(this.txtIgrac);
@@ -180,7 +188,7 @@
             // 
             // tabBrisanje
             // 
-            this.tabBrisanje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(23)))), ((int)(((byte)(75)))));
+            this.tabBrisanje.BackColor = System.Drawing.SystemColors.Control;
             this.tabBrisanje.Controls.Add(this.lblObrisiKlub);
             this.tabBrisanje.Controls.Add(this.txtObrisiKlub);
             this.tabBrisanje.Controls.Add(this.btnObrisiKlub);
@@ -238,21 +246,71 @@
             this.panelPozadina.AutoSize = true;
             this.panelPozadina.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelPozadina.BackgroundImage")));
             this.panelPozadina.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelPozadina.Controls.Add(this.toolStrip1);
             this.panelPozadina.Controls.Add(this.tabControl1);
             this.panelPozadina.Controls.Add(this.pictureBox1);
             this.panelPozadina.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPozadina.Location = new System.Drawing.Point(0, 0);
             this.panelPozadina.Name = "panelPozadina";
-            this.panelPozadina.Size = new System.Drawing.Size(1421, 845);
+            this.panelPozadina.Size = new System.Drawing.Size(1496, 879);
             this.panelPozadina.TabIndex = 11;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1494, 27);
+            this.toolStrip1.TabIndex = 11;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pomoćToolStripMenuItem,
+            this.zatvoriAplikacijuToolStripMenuItem});
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(83, 24);
+            this.toolStripButton1.Text = "Datoteka";
+            // 
+            // pomoćToolStripMenuItem
+            // 
+            this.pomoćToolStripMenuItem.Name = "pomoćToolStripMenuItem";
+            this.pomoćToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.pomoćToolStripMenuItem.Text = "Pomoć";
+            this.pomoćToolStripMenuItem.Click += new System.EventHandler(this.pomoćToolStripMenuItem_Click);
+            // 
+            // zatvoriAplikacijuToolStripMenuItem
+            // 
+            this.zatvoriAplikacijuToolStripMenuItem.Name = "zatvoriAplikacijuToolStripMenuItem";
+            this.zatvoriAplikacijuToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.zatvoriAplikacijuToolStripMenuItem.Text = "Zatvori aplikaciju";
+            this.zatvoriAplikacijuToolStripMenuItem.Click += new System.EventHandler(this.zatvoriAplikacijuToolStripMenuItem_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(94, 24);
+            this.toolStripButton2.Text = "O programu";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // FormNBA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1421, 845);
+            this.ClientSize = new System.Drawing.Size(1496, 879);
             this.Controls.Add(this.panelPozadina);
+            this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNBA";
             this.Text = "Logičko programiranje - NBA";
@@ -265,6 +323,9 @@
             this.tabBrisanje.ResumeLayout(false);
             this.tabBrisanje.PerformLayout();
             this.panelPozadina.ResumeLayout(false);
+            this.panelPozadina.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,6 +351,12 @@
         private System.Windows.Forms.TextBox txtObrisiKlub;
         private System.Windows.Forms.Button btnObrisiKlub;
         private System.Windows.Forms.Panel panelPozadina;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripButton1;
+        private System.Windows.Forms.ToolStripMenuItem pomoćToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zatvoriAplikacijuToolStripMenuItem;
     }
 }
 

@@ -61,6 +61,7 @@ namespace NBA_LP_Projekt
             PlEngine.PlCleanup();
         }
 
+
         private void btnDodajIgraca_Click(object sender, EventArgs e)
         {
             PlQuery dodajIgraca = new PlQuery("dodajIgraca(I, K)");
@@ -97,7 +98,34 @@ namespace NBA_LP_Projekt
             PlQuery obrisiKlub = new PlQuery("obrisiKlub(K)");
             obrisiKlub.Variables["K"].Unify(txtObrisiKlub.Text.ToLower());
             obrisiKlub.NextSolution();
-            MessageBox.Show("Klub " + txtObrisiKlub.Text + " uspješno obrisan");
+            
+            if (obrisiKlub.NextSolution() == true)
+            {
+                obrisiKlub.NextSolution();
+                MessageBox.Show("Klub " + txtObrisiKlub.Text + " uspješno obrisan");
+            }
+            else
+            {
+                MessageBox.Show("Klub " + txtObrisiKlub.Text + " nije prethodno dodan!");
+            }
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Autor: Kristijan Maoduš " + "\n" 
+                          + "Kolegij: Logičko programiranje" + "\n"
+                          + "Copyright 2020." + "\n"
+                          + "Sva prava pridržana");
+        }
+
+        private void pomoćToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Program omogućuje provjeru i unos NBA igrača, kao " + "\n" + "i klubova za koje igraju. Također, možete obrisati određene igrače i klubove.");
+        }
+
+        private void zatvoriAplikacijuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
     }
