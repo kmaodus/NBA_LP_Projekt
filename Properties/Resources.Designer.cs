@@ -59,5 +59,15 @@ namespace NBA_LP_Projekt.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] SwiPlCs {
+            get {
+                object obj = ResourceManager.GetObject("SwiPlCs", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

@@ -8,5 +8,5 @@ obrisiIgraca(X) :- retract(igrac(X,_)).
 dodajKlub(X) :- asserta(klub(X)).
 obrisiKlub(X) :- retract(klub(X)).
 
-postojiDatoteka :- exists_file('nba - Copy.pl'), consult('nba - Copy.pl').
-zatvoriDatoteku :-tell('nba - Copy.pl'), listing(klub), listing(igrac), told.
+postojiDatoteka :- exists_file('nba.dat'), consult('nba.dat').
+zatvoriDatoteku :-tell('nba.dat'), listing(klub), listing(igrac), told.

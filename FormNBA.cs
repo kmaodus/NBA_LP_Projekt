@@ -67,7 +67,15 @@ namespace NBA_LP_Projekt
             PlQuery dodajIgraca = new PlQuery("dodajIgraca(I, K)");
             PlQuery dodajKlub = new PlQuery("dodajKlub(K)");
             dodajKlub.Variables["K"].Unify(txtKlub.Text.ToLower());
-            dodajKlub.NextSolution();
+            if (dodajKlub.NextSolution() == true)
+            {
+                dodajKlub.NextSolution();
+            }
+            else
+            {
+                MessageBox.Show("Klub " + txtKlub.Text + " već je dodan!");
+            }
+            
             dodajIgraca.Variables["I"].Unify(txtIgrac.Text.ToLower());
             dodajIgraca.Variables["K"].Unify(txtKlub.Text.ToLower());
             dodajIgraca.NextSolution();
@@ -120,7 +128,7 @@ namespace NBA_LP_Projekt
 
         private void pomoćToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Program omogućuje provjeru i unos NBA igrača, kao " + "\n" + "i klubova za koje igraju. Također, možete obrisati određene igrače i klubove.");
+            MessageBox.Show("Program omogućuje provjeru i unos NBA igrača, kao i klubova za koje igraju u trenutnoj 2019./2020. sezoni." + "\n" + "Također, možete obrisati određene igrače i klubove.");
         }
 
         private void zatvoriAplikacijuToolStripMenuItem_Click(object sender, EventArgs e)

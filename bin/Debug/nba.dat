@@ -1,6 +1,5 @@
 :- dynamic klub/1.
 
-klub('varazdin kk').
 klub('atlanta hawks').
 klub('boston celtics').
 klub('brooklyn nets').
@@ -37,7 +36,42 @@ klub('washington wizards').
 
 :- dynamic igrac/2.
 
-igrac(kikica, 'varazdin kk').
+igrac('russell westbrook', 'houston rockets').
+igrac('eric gordon', 'houston rockets').
+igrac('james harden', 'houston rockets').
+igrac('alec burke', 'golden state warriors').
+igrac('klay thompson', 'golden state warriors').
+igrac('stephen curry', 'golden state warriors').
+igrac('blake griffin', 'detroit pistons').
+igrac('reggie jackson', 'detroit pistons').
+igrac('tim frazier', 'detroit pistons').
+igrac('derrick rose', 'detroit pistons').
+igrac('jamal murray', 'denver nuggets').
+igrac('monte morris', 'denver nuggets').
+igrac('nikola jokic', 'denver nuggets').
+igrac('luka doncic', 'dallas mavericks').
+igrac('seth curry', 'dallas mavericks').
+igrac('kristaps porzingis', 'dallas mavericks').
+igrac('boban marjanovic', 'dallas mavericks').
+igrac('collin sexton', 'cleveland cavaliers').
+igrac('dante exum', 'cleveland cavaliers').
+igrac('brandon knight', 'cleveland cavaliers').
+igrac('kevin love', 'cleveland cavaliers').
+igrac('zach lavine', 'chicago bulls').
+igrac('kris dunn', 'chicago bulls').
+igrac('coby white', 'chicago bulls').
+igrac('otto porter', 'chicago bulls').
+igrac('thaddeus young', 'chicago bulls').
+igrac('cody zeller', 'charlotte hornets').
+igrac('malik monk', 'charlotte hornets').
+igrac('nicolas batum', 'charlotte hornets').
+igrac('terry rozier', 'charlotte hornets').
+igrac('joe harris', 'brooklyn nets').
+igrac('taurean prince', 'brooklyn nets').
+igrac('caris levert', 'brooklyn nets').
+igrac('garrett temple', 'brooklyn nets').
+igrac('spencer dinwiddie', 'brooklyn nets').
+igrac('kyrie irving', 'brooklyn nets').
 igrac('tacko fall', 'boston celtics').
 igrac('daniel theis', 'boston celtics').
 igrac('grant williams', 'boston celtics').
@@ -55,11 +89,4 @@ igrac('cam reddish', 'atlanta hawks').
 igrac('john collins', 'atlanta hawks').
 igrac('vince carter', 'atlanta hawks').
 igrac('allen crabbe', 'atlanta hawks').
-igrac('kemba walker', 'boston celtics').
-igrac('zach lavine', 'chicago bulls').
-igrac('mario hezonja', 'new york knicks').
-igrac('Lebron James', 'Los Angeles Lakers').
-igrac('Zach Lavine', 'Chicago Bulls').
-igrac('kobe bryant', 'los angeles lakers').
-igrac('dario saric', 'phoenix suns').
 

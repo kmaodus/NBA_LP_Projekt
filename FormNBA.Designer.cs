@@ -276,7 +276,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(83, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(84, 24);
             this.toolStripButton1.Text = "Datoteka";
             // 
             // pomoćToolStripMenuItem
